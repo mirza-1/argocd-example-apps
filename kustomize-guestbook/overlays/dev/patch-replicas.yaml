@@ -1,0 +1,8 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # The name of the deployment file in the BASE folder
+  name: guestbook-ui-deployment.yaml 
+spec:
+  # Set the desired replica count for development
+  replicas: 1

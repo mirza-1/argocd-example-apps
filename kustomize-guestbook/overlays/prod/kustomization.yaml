@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# 1. INHERIT: Pull in all resources from the base folder.
+resources:
+- ../../base 
+
+# 2. IDENTIFY: Add a different prefix (e.g., 'prod-guestbook-ui').
+namePrefix: prod-
+
+# 3. PATCH: Apply the specific patch to change the replica count.
+patches:
+- path: patch-replicas.yaml
